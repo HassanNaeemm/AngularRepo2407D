@@ -1,0 +1,24 @@
+<h3></h3>
+<div class="container">
+    <div class="p-4" style="border: 1px solid black;">
+<input type="text" name="productname" [(ngModel)]="productname" class="form-control"  placeholder="Enter Product Name">
+<br>
+<input type="text" name="productprice" [(ngModel)]="productprice" class="form-control" placeholder="Enter Product Price">
+<br>
+<input type="hidden" value="1" name="userid" [(ngModel)]="userid">
+<br>
+<button (click)="abc()" class="btn btn-success w-100">Post Data</button>
+</div>
+<hr>
+<h3>Api Records</h3>
+<hr>
+
+<mat-list *ngFor="let item of globaldata">
+  <mat-list-item>
+    <span matListItemTitle>{{ item.name }}</span>
+    <span matListItemLine>{{item.price}}</span>
+  </mat-list-item>
+  
+</mat-list>
+</div>
+<router-outlet></router-outlet>
